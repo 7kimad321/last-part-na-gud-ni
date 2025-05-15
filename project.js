@@ -13,7 +13,7 @@ function validateLogin(event) {
     if (username === validUsername && password === validPassword) {
         alert('Login successful!');
         
-        window.location.href = '/project2.html';
+        window.location.href = '/index2.html';
     } else {
         alert('Invalid username or password. Please try again.');
     }
