@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kapatagan</title>
+    <link rel="stylesheet" href="/projectstyle2.css">
+    <link rel="icon" href="/images/images (2) (1).ico" type="image/x-icon">
+</head>
+<body>
+<div id="loading-screen">
+  <div class="spinner"></div>
+</div>
+
+<header>
+    <h1>Welcome to Kapatagan</h1>
+    <nav>
+        <a href="#attractions">Attractions</a>
+        <a href="#cuisine">Local Cuisine</a>
+        <a href="#accommodations">Accommodations</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact Us</a>
+<button id="logout-button" class="logout-button">Log Out</button>
+    </nav>
+</header>
+<img src="/images/images (2) (1).png" alt="Kapatagan Logo" class="logo">
+
+<section id="about">
+    <h2>About Kapatagan</h2>
+    <div class="attraction-card">
+        <img src="/images/WELCOME-TO-LUNGSOD-SA-KAPATAGAN-1.png" alt="About Kapatagan" style="display:block; margin-left:auto; margin-right:auto; max-width: 90%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        <div class="attraction-content">
+            <p>Kapatagan is a thriving municipality that harmoniously blends its rich cultural heritage with the natural beauty of its landscapes. The community works together to preserve its pristine environment, offering visitors breathtaking waterfalls, serene lakes, and lush forests to explore. With a warm and welcoming atmosphere, Kapatagan invites everyone to experience its vibrant festivals, local traditions, and scenic wonders.</p>
+        </div>
+    </div>
+</section>
+
+<section id="attractions">
+    <h2>Attractions</h2>
+    <div class="attraction-card">
+        <img src="/images/santa cruz2.jpg" alt="Santa Cruz Falls">
+        <div class="attraction-content">
+            <h3>Santa Cruz Falls</h3>
+            <p>Experience the beauty of Santa Cruz Falls, a stunning natural wonder perfect for photography and relaxation.</p>
+        </div>
+    </div>
+    <div class="attraction-card">
+        <img src="/images/labirtad.jpg" alt="La Libertad Man-Made Lake">
+        <div class="attraction-content">
+            <h3>La Libertad Man-Made Lake</h3>
+            <p>Enjoy fishing and boating at La Libertad Man-Made Lake, complete with floating cottages for a unique experience.</p>
+        </div>
+    </div>
+    <div class="attraction-card">
+        <img src="/images/image-1113.webp" alt="Cathedral Falls">
+        <div class="attraction-content">
+            <h3>Cathedral Falls</h3>
+            <p>Take a hike to Cathedral Falls and immerse yourself in the breathtaking scenery and tranquility of nature.</p>
+        </div>
+    </div>
+</section>
+
+<section id="cuisine">
+    <h2>Local Cuisine</h2>
+    <img src="/images/kaon23.png" alt="Local Cuisine Main" class="main-image">
+    <p>Discover the flavors of Kapatagan with local dishes and specialties. Don't miss the Kahumayan Festival for a taste of our culinary heritage!</p>
+</section>
+
+<section id="accommodations">
+    <h2>Accommodations</h2>
+    <div class="attraction-card">
+<img src="/images/istockphoto-184336409-1024x1024.jpg "alt="Accommodations" style="display:block; margin-left:auto; margin-right:auto;">
+        <div class="attraction-content">
+            <p>Find the perfect place to stay in Kapatagan, from cozy guesthouses to comfortable hotels. Book your stay today!</p>
+        </div>
+    </div>
+</section>
+
+<section id="activities">
+    <h2>Activities</h2>
+    <div class="attraction-card">
+        <img src="/images/festival.jpg" alt="Activities">
+        <div class="attraction-content">
+            <p>Explore outdoor adventures like hiking and wildlife tours, or immerse yourself in local culture through festivals and events.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2 style="text-align:center;">Contact Us</h2>
+    <div class="attraction-card">
+        <div class="attraction-content">
+            <p style="text-align:center;">If you have any questions or need more information, feel free to reach out!</p>
+<div class="social-logos" style="display:flex; justify-content:center; gap:20px;">
+                <a href="https://www.facebook.com/profile.php?id=61571566293137" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/pacebook.png" alt="Facebook" width="50" height="50">
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/twatter.svg" alt="Twitter" width="50" height="50">
+                </a>
+                <a href="https://www.instagram.com/lungsod_sa_kapatagan/" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/itagram.png" alt="Instagram" width="50" height="50">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2023 Kapatagan Tourism. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('logout-button').addEventListener('click', function() {
+        window.location.href = '/project.html';
+    });
+</script>
+
+<script>
+  window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+      loadingScreen.style.display = 'none';
+    }
+  });
+</script>
+
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  
+  function animateOnScroll() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      if (isInViewport(section)) {
+        section.classList.add('fadeInUp');
+        section.style.opacity = 1;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+</script>
+</body>
+</html>
